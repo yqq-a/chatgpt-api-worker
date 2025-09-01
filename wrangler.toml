@@ -1,0 +1,25 @@
+name = "chatgpt-api-worker"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# 环境变量（非敏感）
+[vars]
+# 你可以在这里设置非敏感的环境变量
+
+# Workers 路由和触发器
+[[routes]]
+pattern = "your-domain.com/api/*"  # 替换为你的域名
+zone_name = "your-domain.com"      # 替换为你的域名
+
+# 或者使用自定义域名
+# [env.production.routes]
+# pattern = "api.your-domain.com/*"
+# zone_name = "your-domain.com"
+
+# 构建设置
+[build]
+command = ""
+
+# 监听端口设置（开发环境）
+[dev]
+port = 8787
